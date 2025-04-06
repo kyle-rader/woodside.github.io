@@ -4,4 +4,6 @@
 
 ## Deployment
 
-Deployment is via GitHub Actions. [Reference guide](https://docs.astro.build/en/guides/deploy/github/).
+[The Deployment Pipeline](https://github.com/kyle-rader/woodside.github.io/actions/workflows/deploy.yml) is via GitHub Actions. 
+
+[Setup Reference guide](https://docs.astro.build/en/guides/deploy/github/).
