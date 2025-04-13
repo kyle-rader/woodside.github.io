@@ -5,8 +5,20 @@ const username = "withastro";
 
 <footer>
   <p>
-    Learn more about my projects on <a
-      href={`https://www.${platform}.com/${username}`}>{platform}</a
-    >!
+    Copyright &copy; {new Date().getFullYear()} <a href="https://astro.build">Woodside Community Association</a>. All rights reserved.
   </p>
 </footer>
+
+<style>
+  footer {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  :global(body) {
+    margin-bottom: 50px; /* Adjust based on your footer height */
+  }
+</style>
