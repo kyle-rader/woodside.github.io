@@ -2,6 +2,8 @@
 
 This repository contains the [Woodside Community Association](https://woodsidebhamhoa.com) website.
 
+[![Deploy to GitHub Pages](https://github.com/kyle-rader/woodside.github.io/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/kyle-rader/woodside.github.io/actions/workflows/deploy.yml)
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
