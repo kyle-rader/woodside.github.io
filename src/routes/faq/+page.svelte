@@ -1,0 +1,10 @@
+<script lang="ts">
+	import Container from '$lib/layout/container.svelte';
+	import Section from '$lib/layout/section.svelte';
+</script>
+
+<Container>
+	<Section title="FAQ">
+		<p>Coming Soon!</p>
+	</Section>
+</Container>
