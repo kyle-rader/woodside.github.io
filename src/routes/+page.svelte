@@ -2,6 +2,9 @@
 	import Container from '$lib/layout/container.svelte';
 	import Section from '$lib/layout/section.svelte';
 	import InvoiceRequest from '$lib/components/InvoiceRequest.svelte';
+	import Facebook from '$lib/components/facebook.svelte';
+	import { facebookUrl } from '$lib';
+	import FacebookIcon from '$lib/components/facebook_icon.svelte';
 	// const nextMeeting = new Date('February 1, 2026');
 	const nextMeeting = 'February, 2026 - Date TBD';
 	const contactEmail = 'woodsidebhamhoa@googlegroups.com';
@@ -58,6 +61,19 @@
 		<a href="mailto:{contactEmail}" class="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-700">
 			<span class="font-semibold">📧 Contact</span>
 			<p class=" text-gray-500 dark:text-gray-300">Email: {contactEmail}</p>
+		</a>
+		<a
+			href={facebookUrl}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-700"
+		>
+			<span class="font-semibold">
+				<FacebookIcon /> FB Group
+			</span>
+			<p class=" text-gray-500 dark:text-gray-300">
+				Join the Woodside Community Facebook Group to see events
+			</p>
 		</a>
 	</div>
 </Container>
