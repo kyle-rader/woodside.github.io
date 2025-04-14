@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Container from '$lib/layout/container.svelte';
 	import Section from '$lib/layout/section.svelte';
-	import InvoiceRequest from '$lib/components/InvoiceRequest.svelte';
+	import InvoiceRequest from './dues/InvoiceRequest.svelte';
 	import Facebook from '$lib/components/facebook.svelte';
 	import { facebookUrl } from '$lib';
 	import FacebookIcon from '$lib/components/facebook_icon.svelte';
@@ -22,43 +22,56 @@
 			Welcome to the <abbr title="Woodside Community Association">WCA</abbr>
 		</h1>
 		<p class="text-lg text-gray-600 dark:text-gray-300">
-			A <a
+			A neighborhood community in <a
 				href={googleMapsUrl}
 				target="_blank"
-				class="text-lime-600 hover:underline dark:text-lime-400">neighborhood community</a
-			> in Bellingham, WA
+				class="text-lime-600 hover:underline dark:text-lime-400"
+			>
+				📍 Bellingham, WA
+			</a>
 		</p>
 	</header>
 
-	<img src="/img/woodside_sign.jpg" alt="Woodside Sign" class="mx-auto mb-4 sm:w-3/4 md:w-1/2" />
+	<img src="/img/woodside_sign.jpg" alt="Woodside Sign" class="mx-auto mb-4 sm:w-3/4" />
 
 	<Section
 		title="📢 Announcements"
-		class="rounded-lg bg-white text-center shadow-md md:mx-auto md:w-1/2 dark:bg-zinc-700"
+		class="rounded-lg bg-white text-center shadow-md dark:bg-zinc-700"
 	>
 		<div class="space-y-2">
-			<p class="text-gray-700 dark:text-gray-200">Next HOA Meeting:</p>
-			<p class="text-gray-700 dark:text-gray-200">{nextMeeting}</p>
+			<p class="text-gray-700 dark:text-gray-200">Next HOA Meeting: {nextMeeting}</p>
 		</div>
 	</Section>
 
 	<h2 class="mb-4 text-center text-xl font-bold">Quick Links</h2>
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-		<a href="/dues" class="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-700">
+		<a
+			href="/dues"
+			class="rounded-lg bg-white p-4 shadow-md hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600"
+		>
 			<span class="font-semibold">💸 Paying Dues</span>
 			<p class=" text-gray-500 dark:text-gray-300">Pay by check or online</p>
 		</a>
-		<a href="/faq" class="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-700">
+		<a
+			href="/faq"
+			class="rounded-lg bg-white p-4 shadow-md hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600"
+		>
 			<span class="font-semibold">📖 Rules FAQ</span>
 			<p class=" text-gray-500 dark:text-gray-300">Common CC&R and Bylaws Guidelines</p>
 		</a>
-		<a href="/resources" class="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-700">
-			<span class="font-semibold">📄 Resources</span>
+		<a
+			href="/resources"
+			class="rounded-lg bg-white p-4 shadow-md hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600"
+		>
+			<span class="font-semibold">🏠 Resources</span>
 			<p class=" text-gray-500 dark:text-gray-300">
-				Local businesses, meeting minutes, CC&Rs, ByLaws, etc.
+				Links to utilities, local businesses, HOA documents, etc.
 			</p>
 		</a>
-		<a href="mailto:{contactEmail}" class="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-700">
+		<a
+			href="mailto:{contactEmail}"
+			class="rounded-lg bg-white p-4 shadow-md hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600"
+		>
 			<span class="font-semibold">📧 Contact</span>
 			<p class=" text-gray-500 dark:text-gray-300">Email: {contactEmail}</p>
 		</a>
@@ -66,7 +79,7 @@
 			href={facebookUrl}
 			target="_blank"
 			rel="noopener noreferrer"
-			class="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-700"
+			class="rounded-lg bg-white p-4 shadow-md hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600"
 		>
 			<span class="font-semibold">
 				<FacebookIcon /> FB Group

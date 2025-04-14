@@ -16,28 +16,27 @@
 		},
 		{
 			category: '💧 Water',
-			name: 'City of Woodside',
-			url: 'https://www.cityofwoodside.org/water',
+			name: 'City of Bellingham',
+			url: 'https://cob.org/services/utilities/water-utility',
 			notes: ''
 		},
 		{
 			category: '🗑️ Trash - ♻️ Recycling',
 			name: 'Sanitation Service Company',
 			url: 'https://portal.ssc-inc.com/User/Login?ReturnUrl=%2f',
-			notes: 'Schedule pickups and more: https://ssc-inc.com/collection-schedule/'
+			notes: ''
 		},
 		{
-			category: '🛜 Internet - Comcast',
-			name: 'Comcast',
+			category: '🛜 Internet - Xfinity',
+			name: 'Xfinity',
 			url: 'https://www.xfinity.com/',
-			notes: ''
+			notes: 'Provides up to 1000+ Gbps download and 35 Mpbs upload.'
 		},
 		{
 			category: '🛜 Internet - Ziply Fiber',
 			name: 'Ziply Fiber',
 			url: 'https://www.ziplyfiber.com/',
-			notes:
-				'Installation is underway in Woodside and we expect gigabit fiber options from Ziply soon!'
+			notes: 'Coming soon! Gigabit+ fiber options (both download and upload)! Expected in 2025.'
 		}
 	];
 </script>

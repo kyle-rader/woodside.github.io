@@ -1,17 +1,23 @@
 <script lang="ts">
+	import { contactEmail } from '$lib';
 	import Container from '$lib/layout/container.svelte';
 	import Section from '$lib/layout/section.svelte';
-	import InvoiceRequest from '$lib/components/InvoiceRequest.svelte';
+	import InvoiceRequest from './InvoiceRequest.svelte';
 </script>
 
 <Container>
 	<Section title="💵 Paying Dues Online">
 		<p class="mb-3 text-gray-600 dark:text-gray-300">
-			Amount: <code class="font-semibold">$205</code>
+			Amount: <code class="font-semibold">$206</code>
 			<br />
 			Due: annually on March 1st.
 		</p>
 		<InvoiceRequest />
+		<p class="mt-2 text-gray-600 dark:text-gray-300">
+			If you do not have an email client that can open the new email template, please send an email
+			to <code class="font-bold">{contactEmail}</code> with the subject "Invoice Request", your name
+			and address.
+		</p>
 	</Section>
 
 	<Section title="📫 Paying Dues by Check">
