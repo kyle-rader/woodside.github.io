@@ -32,6 +32,23 @@
 		}
 	];
 
+	let landscaping = [
+		{
+			name: 'Grow Source',
+			website: 'http://growsource.com',
+			mapUrl: 'https://maps.app.goo.gl/jL9S4sEcdUyAoYfB6',
+			distanceMiles: 1.8,
+			note: 'Landscaping supplies: Mulch, Soil, Bark, Gravel, etc.'
+		},
+		{
+			name: 'Northstar Stone & Landscape Supply',
+			website: 'http://www.northstarstone.net',
+			mapUrl: 'https://maps.app.goo.gl/W1UWbCnN1XbqzCZR6',
+			distanceMiles: 7.6,
+			note: 'Landscaping supplies: Stone pavers, retaining blocks, Mulch, Soil, Bark, Gravel, etc.'
+		}
+	];
+
 	let hardware = [
 		{
 			name: 'Builders Alliance',
@@ -80,4 +97,5 @@
 </script>
 
 <BusinessList title="🌳 Garden Nurseries" businesses={gardening} />
+<BusinessList title="🪨 Landscaping Supplies" businesses={landscaping} />
 <BusinessList title="🛠️ Hardware Stores" businesses={hardware} />
