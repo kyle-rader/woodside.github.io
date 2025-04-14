@@ -13,10 +13,10 @@
 			Due: annually on March 1st.
 		</p>
 		<InvoiceRequest />
-		<p class="mt-2 text-gray-600 dark:text-gray-300">
+		<p class="mt-4 text-gray-600 dark:text-gray-300">
 			If you do not have an email client that can open the new email template, please send an email
-			to <code class="font-bold">{contactEmail}</code> with the subject "Invoice Request", your name
-			and address.
+			to <code class="font-bold">{contactEmail}</code> with the subject "Invoice Request" and include
+			your name and address.
 		</p>
 	</Section>
 

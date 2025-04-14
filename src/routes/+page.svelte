@@ -1,15 +1,12 @@
 <script lang="ts">
 	import Container from '$lib/layout/container.svelte';
 	import Section from '$lib/layout/section.svelte';
-	import InvoiceRequest from './dues/InvoiceRequest.svelte';
-	import Facebook from '$lib/components/facebook.svelte';
 	import { facebookUrl } from '$lib';
 	import FacebookIcon from '$lib/components/facebook_icon.svelte';
-	// const nextMeeting = new Date('February 1, 2026');
+	import Link from '$lib/components/link.svelte';
+
 	const nextMeeting = 'February, 2026 - Date TBD';
 	const contactEmail = 'woodsidebhamhoa@googlegroups.com';
-	const invoiceSubject = 'Woodside HOA Dues Invoice Request';
-	const invoiceBody = 'Please send me an invoice for the dues for the year.';
 
 	const googleMapsUrl =
 		'https://www.google.com/maps/@48.7802007,-122.4310919,427a,35y,92.86h,48.09t/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D';
@@ -22,13 +19,7 @@
 			Welcome to the <abbr title="Woodside Community Association">WCA</abbr>
 		</h1>
 		<p class="text-lg text-gray-600 dark:text-gray-300">
-			A neighborhood community in <a
-				href={googleMapsUrl}
-				target="_blank"
-				class="text-lime-600 hover:underline dark:text-lime-400"
-			>
-				📍 Bellingham, WA
-			</a>
+			A neighborhood community in <Link href={googleMapsUrl}>📍 Bellingham, WA</Link>
 		</p>
 	</header>
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Section from '$lib/layout/section.svelte';
-
+	import Link from '$lib/components/link.svelte';
 	let utilities = [
 		{
 			category: '⚡️ Electricity',
@@ -41,19 +41,12 @@
 	];
 </script>
 
-<Section title="Utilities Companies">
+<Section title="🔌 Utilities">
 	<ul class="flex flex-col gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3">
 		{#each utilities as utility}
 			<li class="flex flex-col gap-2">
 				<h2 class="text-lg font-bold">{utility.category}</h2>
-				<a
-					href={utility.url}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="text-lime-600 hover:text-lime-700"
-				>
-					{utility.name}
-				</a>
+				<Link href={utility.url}>{utility.name}</Link>
 				{#if utility.notes}
 					<p class="text-sm text-gray-500 dark:text-gray-300">{utility.notes}</p>
 				{/if}
