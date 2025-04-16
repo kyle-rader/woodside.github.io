@@ -18,7 +18,7 @@
 </script>
 
 <Section {title}>
-	<ul class="flex flex-col gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3">
+	<ul class="mt-4 flex flex-col gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3">
 		{#each businesses as business}
 			<li class="flex flex-col gap-2">
 				<h2 class="text-lg font-bold">{business.name}</h2>

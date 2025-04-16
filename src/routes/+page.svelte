@@ -8,6 +8,21 @@
 	const nextMeeting = 'February, 2026 - Date TBD';
 	const contactEmail = 'woodsidebhamhoa@googlegroups.com';
 
+	let events = [
+		{
+			title: 'Next HOA Meeting',
+			notes: 'February, 2026 - Date TBD',
+			clearOn: '2026-03-15'
+		},
+		{
+			title: 'Easter Egg Hunt 2025',
+			notes: 'April 19th, 2025 @ 11:00 AM.<br/>At the park on Woodside Way.',
+			clearOn: '2025-04-20'
+		}
+	];
+
+	let futureEvents = events.filter((event) => new Date(event.clearOn) > new Date());
+
 	const googleMapsUrl =
 		'https://www.google.com/maps/@48.7802007,-122.4310919,427a,35y,92.86h,48.09t/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D';
 </script>
@@ -25,12 +40,16 @@
 
 	<img src="/img/woodside_sign.jpg" alt="Woodside Sign" class="mx-auto mb-4 sm:w-3/4" />
 
-	<Section
-		title="📢 Announcements"
-		class="rounded-lg bg-white text-center shadow-md dark:bg-zinc-700"
-	>
-		<div class="space-y-2">
-			<p class="text-gray-700 dark:text-gray-200">Next HOA Meeting: {nextMeeting}</p>
+	<Section title="📢 Upcoming Events" class="gap-4 rounded-lg bg-white shadow-md dark:bg-zinc-700">
+		<div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+			{#each futureEvents as event}
+				<div class="min-w-[300px] flex-1 sm:max-w-[calc(50%-1rem)]">
+					<div class="flex flex-col gap-2 rounded-lg border p-4">
+						<h3 class="text-lg font-bold">{event.title}</h3>
+						<p class="text-gray-700 dark:text-gray-200">{@html event.notes}</p>
+					</div>
+				</div>
+			{/each}
 		</div>
 	</Section>
 
