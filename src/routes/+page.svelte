@@ -1,12 +1,9 @@
 <script lang="ts">
 	import Container from '$lib/layout/container.svelte';
 	import Section from '$lib/layout/section.svelte';
-	import { facebookUrl } from '$lib';
+	import { facebookUrl, contactEmail } from '$lib';
 	import FacebookIcon from '$lib/components/facebook_icon.svelte';
 	import Link from '$lib/components/link.svelte';
-
-	const nextMeeting = 'February, 2026 - Date TBD';
-	const contactEmail = 'woodsidebhamhoa@googlegroups.com';
 
 	let events = [
 		{
