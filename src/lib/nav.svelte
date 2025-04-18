@@ -21,10 +21,12 @@
 </script>
 
 <nav class="mx-auto mt-4 flex flex-col">
-	<h2 class="text-center text-xl font-bold md:text-2xl">Woodside Community Association</h2>
+	<h2 class="mt-2 text-center text-xl font-bold sm:text-2xl md:text-3xl">
+		Woodside Community Association
+	</h2>
 	<ul class="mt-2 flex w-full flex-row justify-between">
 		{#each pages as page}
-			<li><a href={page.href}>{page.name}</a></li>
+			<li><a href={page.href} class="sm:text-lg">{page.name}</a></li>
 		{/each}
 		<li><Facebook /></li>
 	</ul>
