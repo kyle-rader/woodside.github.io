@@ -41,7 +41,7 @@
 	];
 </script>
 
-<Section title="🔌 Utilities">
+<Section title="🔌 Our Utility Providers">
 	<ul class="mt-4 flex flex-col gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3">
 		{#each utilities as utility}
 			<li class="flex flex-col gap-2">
