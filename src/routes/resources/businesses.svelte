@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BusinessList from './business_list.svelte';
+	import Section from '$lib/layout/section.svelte';
 
 	let gardening = [
 		{
@@ -96,12 +97,13 @@
 	];
 </script>
 
-<h1 class="mb-2 text-2xl font-bold">📍 Local Businesses</h1>
-<p class="mb-4 text-gray-500 dark:text-gray-300">
-	These are some local businesses you may find useful while owning or living in a house!
-	<br />
-	(We are not affiliated with or paid by any of these businesses.)
-</p>
+<Section title="📍 Local Businesses">
+	<p class="mb-4 text-gray-500 dark:text-gray-300">
+		These are some local businesses you may find useful while owning or living in a house!
+		<br />
+		(We are not affiliated with or paid by any of these businesses.)
+	</p>
+</Section>
 <BusinessList title="🌳 Garden Nurseries" businesses={gardening} />
 <BusinessList title="🪨 Landscaping Supplies" businesses={landscaping} />
 <BusinessList title="🛠️ Hardware Stores" businesses={hardware} />

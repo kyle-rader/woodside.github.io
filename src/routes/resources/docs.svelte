@@ -55,14 +55,16 @@
 	const financials = allFiles.filter(file => 
 		file.fullPath.includes('/docs/books/')
 	).sort((a, b) => a.name.localeCompare(b.name));
-	
+
 </script>
 
 <Section title="📜 Documents">
 	<div class="mt-4 space-y-8">
 		<!-- Rules & Regulations -->
 		<div>
-			<h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">📋 Rules & Regulations</h3>
+			<h3 id="rules-regulations" class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">
+				<a href="#rules-regulations" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">📋 Rules & Regulations</a>
+			</h3>
 			<ul class="flex flex-col gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3">
 				{#each rulesAndRegulations as doc}
 					<li class="flex flex-col gap-2">
@@ -75,7 +77,9 @@
 
 		<!-- Meeting Minutes -->
 		<div>
-			<h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">📝 Meeting Minutes</h3>
+			<h3 id="meeting-minutes" class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">
+				<a href="#meeting-minutes" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">📝 Meeting Minutes</a>
+			</h3>
 			<ul class="list-disc list-inside space-y-2">
 				{#each meetingMinutes as doc}
 					<li>
@@ -87,7 +91,9 @@
 
 		<!-- Financials -->
 		<div>
-			<h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">💰 Financials</h3>
+			<h3 id="financials" class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">
+				<a href="#financials" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">💰 Financials</a>
+			</h3>
 			{#if financials.length > 0}
 				<ul class="list-disc list-inside space-y-2">
 					{#each financials as doc}
