@@ -7,7 +7,7 @@
 </script>
 
 <Container>
-	<Section title="❓ Frequently Asked Questions" class="flex flex-col gap-4">
+	<Section title="❓ Frequently Asked Questions" class="flex flex-col gap-4" id="faq">
 		<FaqItem title="What is the trash/recycling/compost 🗑️/♻️/🍂 schedule?">
 			You can find your schedule on
 			<Link href="https://ssc-inc.com/collection-schedule/"
@@ -38,10 +38,29 @@
 					the neighborhood
 				</li>
 			</ul>
+
+			<p class="mt-4">
+				You can contact the board at <Link href={`mailto:${contactEmail}`}>{contactEmail}</Link>.
+			</p>
+		</FaqItem>
+
+		<FaqItem title="🏠 Selling Your Home - What documents do prospective buyers need?">
+			<p class="mb-4">
+				When selling your home, prospective buyers will typically request various HOA documents including:
+			</p>
+			<ul class="list-disc pl-4 mb-4">
+				<li>HOA bylaws and covenants</li>
+				<li>Financial statements and budgets</li>
+				<li>Meeting minutes</li>
+			</ul>
+			<p>
+				All the documents requested by prospective buyers can be downloaded from our
+				<Link href="/resources#documents">Documents section on the resources page</Link>.
+			</p>
 		</FaqItem>
 	</Section>
 
-	<Section title="🌳 FAQ on Trees" class="flex flex-col gap-4">
+	<Section title="🌳 FAQ on Trees" class="flex flex-col gap-4" id="trees">
 		<FaqItem title="🌱 What trees may I plant?">
 			You can plant new trees that do not grow taller than <strong>35 feet</strong>.
 			<p class="mt-4">
