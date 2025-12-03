@@ -58,7 +58,7 @@
 
 </script>
 
-<Section title="📜 Documents">
+<Section title="📜 Documents" id="documents">
 	<div class="mt-4 space-y-8">
 		<!-- Rules & Regulations -->
 		<div>
