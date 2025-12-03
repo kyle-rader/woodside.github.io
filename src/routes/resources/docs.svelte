@@ -56,6 +56,11 @@
 		file.fullPath.includes('/docs/books/')
 	).sort((a, b) => a.name.localeCompare(b.name));
 
+	// Dynamically get communications from /docs/comms/ directory (newest first)
+	const communications = allFiles.filter(file => 
+		file.fullPath.includes('/docs/comms/')
+	).sort((a, b) => b.name.localeCompare(a.name)); // Reverse sort for newest first
+
 </script>
 
 <Section title="📜 Documents" id="documents">
@@ -104,6 +109,24 @@
 				</ul>
 			{:else}
 				<p class="text-sm text-gray-500 dark:text-gray-300 italic">No financial documents available at this time.</p>
+			{/if}
+		</div>
+
+		<!-- Communications -->
+		<div>
+			<h3 id="communications" class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">
+				<a href="#communications" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">📧 Communications</a>
+			</h3>
+			{#if communications.length > 0}
+				<ul class="list-disc list-inside space-y-2">
+					{#each communications as doc}
+						<li>
+							<Link href={doc.href}>{doc.name}</Link>
+						</li>
+					{/each}
+				</ul>
+			{:else}
+				<p class="text-sm text-gray-500 dark:text-gray-300 italic">No communications available at this time.</p>
 			{/if}
 		</div>
 	</div>
