@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { deserialize } from '$app/forms';
 	import Link from '$lib/components/link.svelte';
 	import Section from '$lib/layout/section.svelte';
 
@@ -17,13 +16,48 @@
 		const fileName = path.split('/').pop() || '';
 		const fileNameWithoutExt = fileName.replace(/\.[^/.]+$/, '');
 		const relativePath = path.replace('/static', '');
+		const extension = fileName.split('.').pop()?.toLowerCase() || '';
 		
 		return {
 			name: fileNameWithoutExt,
 			href: relativePath,
-			fullPath: path
+			fullPath: path,
+			extension: extension
 		};
 	});
+
+	// Helper function to filter out DOCX files when PDF versions exist
+	function preferPdfOverDocx(files: typeof allFiles) {
+		// Group files by their base name (without extension)
+		const fileGroups = new Map<string, typeof allFiles>();
+		
+		files.forEach(file => {
+			if (!fileGroups.has(file.name)) {
+				fileGroups.set(file.name, []);
+			}
+			fileGroups.get(file.name)!.push(file);
+		});
+		
+		// For each group, prefer PDF over DOCX
+		const filtered: typeof allFiles = [];
+		fileGroups.forEach((groupFiles) => {
+			const pdfFile = groupFiles.find(f => f.extension === 'pdf');
+			const docxFile = groupFiles.find(f => f.extension === 'docx');
+			
+			if (pdfFile) {
+				// If PDF exists, use it
+				filtered.push(pdfFile);
+			} else if (docxFile) {
+				// If no PDF but DOCX exists, use DOCX
+				filtered.push(docxFile);
+			} else {
+				// If neither PDF nor DOCX, include all files (for other extensions)
+				filtered.push(...groupFiles);
+			}
+		});
+		
+		return filtered;
+	}
 
 	// Categorize files based on their directory and name
 	const rulesAndRegulations: Document[] = [
@@ -47,18 +81,18 @@
 	];
 
 	// Dynamically get meeting minutes from /docs/minutes/ directory
-	const meetingMinutes = allFiles.filter(file => 
-		file.fullPath.includes('/docs/minutes/')
+	const meetingMinutes = preferPdfOverDocx(
+		allFiles.filter(file => file.fullPath.includes('/docs/minutes/'))
 	).sort((a, b) => a.name.localeCompare(b.name));
 
 	// Dynamically get financials from /docs/books/ directory  
-	const financials = allFiles.filter(file => 
-		file.fullPath.includes('/docs/books/')
+	const financials = preferPdfOverDocx(
+		allFiles.filter(file => file.fullPath.includes('/docs/books/'))
 	).sort((a, b) => a.name.localeCompare(b.name));
 
 	// Dynamically get communications from /docs/comms/ directory (newest first)
-	const communications = allFiles.filter(file => 
-		file.fullPath.includes('/docs/comms/')
+	const communications = preferPdfOverDocx(
+		allFiles.filter(file => file.fullPath.includes('/docs/comms/'))
 	).sort((a, b) => b.name.localeCompare(a.name)); // Reverse sort for newest first
 
 </script>
