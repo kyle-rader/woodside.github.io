@@ -5,18 +5,11 @@
 
 	let events = [
 		{
-			title: 'Next HOA Meeting',
-			date: 'February, 2026 - Date TBD',
-			location: 'TBD',
+			title: 'Next Annual Meeting',
+			date: 'February 2, 2026 @ 6:30 PM',
+			location: 'Location found in mailed notice',
 			fbLink: null,
-			clearOn: '2026-03-15'
-		},
-		{
-			title: 'Easter Egg Hunt 2025',
-			date: 'April 19th, 2025 @ 11:00 AM',
-			location: 'At the park on Woodside Way.',
-			fbLink: 'https://fb.me/e/2uGUbSOD6',
-			clearOn: '2025-04-20'
+			clearOn: '2026-02-03'
 		}
 	];
 
