@@ -10,6 +10,13 @@
 			location: 'Location found in mailed notice',
 			fbLink: null,
 			clearOn: '2026-02-03'
+		},
+		{
+			title: 'Annual Easter Egg Hunt',
+			date: 'Saturday, April 4, 2026 @ 11:00 AM',
+			location: null,
+			fbLink: null,
+			clearOn: '2026-04-05'
 		}
 	];
 
