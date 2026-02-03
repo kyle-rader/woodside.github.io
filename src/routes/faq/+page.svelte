@@ -94,7 +94,7 @@
 		{#if isEffective}
 			<div class="mb-4 rounded-md border-2 border-green-500 bg-green-50 p-4 dark:bg-green-900/20">
 				<p class="font-semibold text-green-800 dark:text-green-200">
-					✓ Fine schedule is now in effect as of January 5, 2026
+					✓ Fine schedule is now in effect as of February 5, 2026
 				</p>
 			</div>
 		{:else}
@@ -102,7 +102,7 @@
 				class="mb-4 rounded-md border-2 border-yellow-500 bg-yellow-50 p-4 dark:bg-yellow-900/20"
 			>
 				<p class="font-semibold text-yellow-800 dark:text-yellow-200">
-					⚠️ This fine schedule is not in effect yet. It will be effective as of January 5, 2026.
+					⚠️ This fine schedule is not in effect yet. It will be effective as of February 5, 2026.
 				</p>
 			</div>
 		{/if}
