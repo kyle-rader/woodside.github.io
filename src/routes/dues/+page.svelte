@@ -1,28 +1,28 @@
 <script lang="ts">
-	import { contactEmail } from '$lib';
 	import Container from '$lib/layout/container.svelte';
 	import Section from '$lib/layout/section.svelte';
-	import InvoiceRequest from './InvoiceRequest.svelte';
 </script>
 
+<svelte:head>
+	<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+</svelte:head>
+
 <Container>
-	<Section title="💵 Paying Dues Online">
+	<Section id="online" title="💵 Pay dues automatically online">
 		<p class="mb-3 text-gray-600 dark:text-gray-300">
-			Amount: <code class="font-semibold">$206</code>
-			<br />
-			Due: annually on March 1st.
+			Due: annually on <code class="font-semibold">March 1st</code>.
 		</p>
-		<InvoiceRequest />
-		<p class="mt-4 text-gray-600 dark:text-gray-300">
-			If you do not have an email client that can open the new email template, please send an email
-			to <code class="font-bold">{contactEmail}</code> with the subject "Invoice Request" and include
-			your name and address.
-		</p>
+
+		<stripe-buy-button
+			buy-button-id="buy_btn_1SyJfXCa7WtRwkztoDEo3ofT"
+			publishable-key="pk_live_51SyHwfCa7WtRwkztfbwS7zLBJakUipENjDtL3MQA5DuBfqQ6tt8X7bNWbj32P7DjXqXWQEAg4siUufsCVScdnxaS00mLvaWYBc"
+		>
+		</stripe-buy-button>
 	</Section>
 
-	<Section title="📫 Paying Dues by Check">
+	<Section id="check" title="📫 Paying Dues by Check">
 		<p class="mb-3 text-gray-600 dark:text-gray-300">
-			Amount: <code class="font-semibold">$200</code>
+			Amount: <code class="font-semibold">$300</code>
 			<br />
 			Due: annually on March 1st.
 		</p>
@@ -38,3 +38,15 @@ PO Box 28548
 Bellingham, WA 98228</pre>
 	</Section>
 </Container>
+
+<style>
+	:global(div:has(h2#online)) {
+		text-align: center;
+	}
+
+	stripe-buy-button {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+</style>
