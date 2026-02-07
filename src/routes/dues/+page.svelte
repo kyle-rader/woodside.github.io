@@ -8,7 +8,7 @@
 </svelte:head>
 
 <Container>
-	<Section id="online" title="💵 Pay dues automatically online">
+	<Section id="online" title="💵 Pay Dues Online">
 		<p class="mb-3 text-gray-600 dark:text-gray-300">
 			Due: annually on <code class="font-semibold">March 1st</code>.
 		</p>
@@ -20,7 +20,7 @@
 		</stripe-buy-button>
 	</Section>
 
-	<Section id="check" title="📫 Paying Dues by Check">
+	<Section id="check" title="📫 Pay Dues by Check">
 		<p class="mb-3 text-gray-600 dark:text-gray-300">
 			Amount: <code class="font-semibold">$300</code>
 			<br />
