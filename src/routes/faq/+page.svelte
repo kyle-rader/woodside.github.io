@@ -5,7 +5,7 @@
 	import Section from '$lib/layout/section.svelte';
 	import FaqItem from './faq_item.svelte';
 
-	const effectiveDate = new Date('2026-01-05');
+	const effectiveDate = new Date('2026-02-05');
 	const today = new Date();
 	today.setHours(0, 0, 0, 0);
 	effectiveDate.setHours(0, 0, 0, 0);
@@ -63,6 +63,18 @@
 			<p>
 				All the documents requested by prospective buyers can be downloaded from our
 				<Link href="/resources#documents">Documents section on the resources page</Link>.
+			</p>
+		</FaqItem>
+
+		<FaqItem title="🗺️ How do I find my house's plat map?">
+			<p class="mb-4">
+				Open the county map at
+				<Link
+					href="https://whatcom.maps.arcgis.com/apps/webappviewer/index.html?id=f2f8eaa500b04f54948c680bb280129f&find=59625"
+					>this link</Link
+				>
+				which is zoomed to the neighborhood. From there, click your house to view its details, then
+				select <strong>Recorded Map</strong> to see the plat/division.
 			</p>
 		</FaqItem>
 	</Section>
