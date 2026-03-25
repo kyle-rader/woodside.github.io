@@ -76,7 +76,7 @@
 			title: 'Covenants (CC&Rs)',
 			href: '/docs/wca_covenants.pdf',
 			description:
-				'Neighborhoods with covenants and standards tend to be safer, look better, maintain better relationships with local governments, and better retain or increase the investments that homeowners have made in their properties.'
+				'Also sometimes called “rules and regulations”. Neighborhoods with covenants and standards tend to be safer, look better, maintain better relationships with local governments, and better retain or increase the investments that homeowners have made in their properties.'
 		}
 	];
 
